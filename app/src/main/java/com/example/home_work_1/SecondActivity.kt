@@ -1,10 +1,10 @@
-package com.example.myapplication1
+package com.example.home_work_1
 
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.home_work_1.R
 
 class SecondActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,14 +20,15 @@ class SecondActivity : AppCompatActivity() {
         val incomingRecipientEmail = intent.getStringExtra("ReceiverEmailKey")
         val incomingMessage = intent.getStringExtra("MessageKey")
 
-        displayEmail.setText(incomingEmail)
-        displayReceiverEmail.setText(incomingRecipientEmail)
+        displayEmail.setText("From: " +incomingEmail)
+        displayReceiverEmail.setText("To: "+incomingRecipientEmail)
         displayMessage.setText(incomingMessage)
 
         resetButton.setOnClickListener {
             displayEmail.setText("")
             displayReceiverEmail.setText("")
             displayMessage.setText("")
+            Toast.makeText(this, "All Fields Are Cleared", Toast.LENGTH_SHORT).show()
         }
     }
 }

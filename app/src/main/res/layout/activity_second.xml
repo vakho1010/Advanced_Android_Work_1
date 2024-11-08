@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.myapplication1.SecondActivity">
+    tools:context=".SecondActivity">
 
     <LinearLayout
         android:id="@+id/topLinearLayout"
@@ -76,12 +76,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="40dp" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/resetButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="clear"
-        android:background="@drawable/rectangle"
+        android:backgroundTint="#E6E5E5"
+        android:background="@drawable/button_rectangle_shape"
         android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@+id/displayMessageInput"
         app:layout_constraintStart_toStartOf="parent"
